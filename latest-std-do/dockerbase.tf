@@ -23,13 +23,10 @@ resource "digitalocean_droplet" "www-metabase" {
   provisioner "remote-exec" {
     inline = [
       "export PATH=$PATH:/usr/bin",
-      # install nginx
+      # install nginx and docker
       "sudo apt update",
-      "sudo apt install -y nginx",
-      "sudo apt install -y docker",
-      "sudo apt install -y docker-compose",
-      "sudo apt install -y python3-certbot-nginx",
-      # create odoo installation directory
+      "sudo apt install -y nginx docker docker-compose python3-certbot-nginx",
+      # create metabase installation directory
       "mkdir /root/metabase"
     ]
   }
