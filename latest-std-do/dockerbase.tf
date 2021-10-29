@@ -28,7 +28,8 @@ resource "digitalocean_droplet" "www-metabase" {
       "sleep 5s",
       "apt update",
       "sleep 5s",
-      "apt install -y nginx python3-certbot-nginx",
+      "apt install -y nginx",
+      "apt install -y python3-certbot-nginx",
       # create metabase installation directory
       "mkdir /root/metabase"
     ]
