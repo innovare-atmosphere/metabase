@@ -1,7 +1,3 @@
-variable "database_password" {
-    default = ""
-}
-
 variable "domain" {
     default = ""
 }
