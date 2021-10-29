@@ -26,6 +26,7 @@ resource "digitalocean_droplet" "www-metabase" {
       # install nginx and docker
       "sleep 5s",
       "apt update",
+      "sleep 5s",
       "apt install -y nginx docker docker-compose python3-certbot-nginx",
       # create metabase installation directory
       "mkdir /root/metabase"
