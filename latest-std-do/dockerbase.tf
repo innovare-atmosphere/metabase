@@ -4,7 +4,8 @@ variable "domain" {
 
 
 resource "digitalocean_droplet" "www-metabase" {
-  image = "ubuntu-20-04-x64"
+  #This has pre installed docker
+  image = "docker-20-04"
   name = "www-1"
   region = "nyc3"
   size = "s-1vcpu-1gb"
@@ -27,7 +28,7 @@ resource "digitalocean_droplet" "www-metabase" {
       "sleep 5s",
       "apt update",
       "sleep 5s",
-      "apt install -y nginx docker docker-compose python3-certbot-nginx",
+      "apt install -y nginx python3-certbot-nginx",
       # create metabase installation directory
       "mkdir /root/metabase"
     ]
