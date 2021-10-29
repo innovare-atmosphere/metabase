@@ -56,6 +56,8 @@ resource "digitalocean_droplet" "www-metabase" {
       "docker-compose up -d",
       "rm /etc/nginx/sites-enabled/default",
       "systemctl restart nginx",
+      "ufw allow http",
+      "ufw allow https",
     ]
   }
 }
