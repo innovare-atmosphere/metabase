@@ -24,8 +24,9 @@ resource "digitalocean_droplet" "www-metabase" {
     inline = [
       "export PATH=$PATH:/usr/bin",
       # install nginx and docker
-      "sudo apt update",
-      "sudo apt install -y nginx docker docker-compose python3-certbot-nginx",
+      "sleep 5s",
+      "apt update",
+      "apt install -y nginx docker docker-compose python3-certbot-nginx",
       # create metabase installation directory
       "mkdir /root/metabase"
     ]
