@@ -6,7 +6,7 @@ variable "domain" {
 resource "digitalocean_droplet" "www-metabase" {
   #This has pre installed docker
   image = "docker-20-04"
-  name = "www-1"
+  name = "www-metabase"
   region = "nyc3"
   size = "s-1vcpu-1gb"
   ssh_keys = [
