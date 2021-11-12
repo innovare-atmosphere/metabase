@@ -12,7 +12,7 @@ resource "digitalocean_droplet" "www-metabase" {
   image = "docker-20-04"
   name = "www-metabase"
   region = "nyc3"
-  size = "s-1vcpu-1gb"
+  size = "s-2vcpu-4gb"
   ssh_keys = [
     digitalocean_ssh_key.terraform.id
   ]
