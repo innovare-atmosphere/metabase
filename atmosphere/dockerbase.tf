@@ -57,7 +57,7 @@ resource "digitalocean_droplet" "www-metabase" {
       "export PATH=$PATH:/usr/bin",
       # run compose
       "cd /root/metabase",
-      "docker-compose up -d",
+      "docker compose up -d",
       "rm /etc/nginx/sites-enabled/default",
       "systemctl restart nginx",
       "ufw allow http",
