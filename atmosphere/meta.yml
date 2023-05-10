@@ -1,0 +1,6 @@
+name: metabase-latest-docker
+description: Deploy standard latest docker image of Metabase on a Digital Ocean droplet
+categories:
+- Administration
+- IT
+- Marketing
